@@ -40,6 +40,9 @@ dependencies {
 
     // logging
     implementation("io.github.microutils:kotlin-logging:3.0.5")
+
+    // swagger api docs
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 }
 
 repositories {
