@@ -49,7 +49,7 @@ object XssEscapeFilter {
 
     private fun log(url: String, paramName: String, value: String?) {
         if (log.isDebugEnabled) {
-            log.debug("Do not filtered Parameter. Request url: $url, Parameter name: $paramName, Parameter value: $value")
+            log.debug("Unfiltered Parameter. Request url: $url, Parameter name: $paramName, Parameter value: $value")
         }
     }
 }
