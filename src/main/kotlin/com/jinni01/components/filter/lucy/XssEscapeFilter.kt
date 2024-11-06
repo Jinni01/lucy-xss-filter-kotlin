@@ -36,9 +36,9 @@ object XssEscapeFilter {
     private fun replaceXSS(origin: String): String {
         val handlers = listOf<Handler>(
             { value -> value.replace("<", "&lt;") },
-            { value -> value.replace(">", "&gt;") },
-            { value -> value.replace("(", "&#40;") },
-            { value -> value.replace(")", "&#41;") }
+            { value -> value.replace(">", "&gt;") }
+            //{ value -> value.replace("(", "&#40;") },
+            //{ value -> value.replace(")", "&#41;") }
         )
 
         var filtered = origin
