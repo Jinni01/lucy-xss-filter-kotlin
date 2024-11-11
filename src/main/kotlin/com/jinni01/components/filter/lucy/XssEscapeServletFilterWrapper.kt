@@ -29,7 +29,7 @@ class XssEscapeServletFilterWrapper(
 
         val contentType = request.contentType
         val isPostMethod = request.method.equals(HttpMethod.POST.name(), ignoreCase = true)
-        val isJson = MediaType.APPLICATION_JSON.toString() == contentType
+        val isJson = MediaType.APPLICATION_JSON_VALUE == contentType
         val isWhiteList = isWhiteList(request)
 
         if (isPostMethod && isJson && !isWhiteList) {

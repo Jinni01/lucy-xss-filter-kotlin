@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController
 @Tag(name = "XSS 필터링 테스트 API")
 @RestController
 @RequestMapping(path = ["/filter-test"])
-class FilterTestController {
+class XssFilterController {
 
     @Operation(summary = "GET | Simple String Parameter")
     @GetMapping(path = ["/mappings/get/simple-string-parameter"])

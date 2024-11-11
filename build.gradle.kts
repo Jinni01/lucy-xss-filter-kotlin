@@ -26,8 +26,11 @@ java {
 }
 
 dependencies {
-    //spring
+    // spring
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // devtools
+    developmentOnly("org.springframework.boot:spring-boot-devtools")
 
     // lucy xss filter
     implementation("com.navercorp.lucy:lucy-xss-servlet:2.0.1")
@@ -43,15 +46,22 @@ dependencies {
 
     // swagger api docs
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+
+    // test
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.kotest", "kotest-runner-junit5", "5.6.2")
+    testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.3")
+    testImplementation("io.rest-assured:rest-assured:5.3.1")
 }
 
 repositories {
     mavenCentral()
 }
 
-tasks.test {
+tasks.withType<Test> {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(17)
 }
